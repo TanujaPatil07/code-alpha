@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>📦 My Orders</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: ##ffebcd;
+      padding: 20px;
+    }
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+    .order-item {
+      background: #fff;
+      padding: 15px;
+      margin: 10px auto;
+      max-width: 600px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .order-item h3 {
+      margin: 0;
+      color: #007bff;
+    }
+    .order-item p {
+      margin: 5px 0;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="dashboard.html" class="back-btn">← Back to Dashboard</a>
+
+  <h2>📦 My Ordered Products</h2>
+  <div id="orders"></div>
+
+  <script>
+  function goBack() {
+      window.location.href = 'dashboard.html';
+    }
+    const orders = JSON.parse(localStorage.getItem("orders")) || [];
+    const container = document.getElementById("orders");
+
+    if (orders.length === 0) {
+      container.innerHTML = "<p>No orders yet.</p>";
+    } else {
+      orders.forEach(order => {
+        const div = document.createElement("div");
+        div.className = "order-item";
+        div.innerHTML = `
+          <h3>${order.name}</h3>
+          <p>Price: ${order.price}</p>
+          <p>Ordered on: ${order.date}</p>
+        `;
+        container.appendChild(div);
+      });
+    }
+  </script>
+
+</body>
+</html>

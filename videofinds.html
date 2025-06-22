@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🎥 Video Finds | My Simple Store</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: ##ffebcd;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .video-card {
+      background: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .video-card iframe {
+      width: 100%;
+      height: 200px;
+      border-radius: 8px;
+    }
+
+    .video-card h3 {
+      margin-top: 12px;
+      font-size: 18px;
+      color: #007bff;
+    }
+
+    .back-btn {
+      margin-bottom: 20px;
+      display: inline-block;
+      padding: 10px 16px;
+      background-color: #6c757d;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+
+    .back-btn:hover {
+      background-color: #5a6268;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <a href="dashboard.html" class="back-btn">← Back to Dashboard</a>
+    <h1>🎥 Featured Product Videos</h1>
+
+    <div class="video-grid">
+      <!-- Video 1 -->
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/Xa0Q0J5tOP0" frameborder="0" allowfullscreen></iframe>
+        <h3>Wireless Headphones Review</h3>
+      </div>
+
+      <!-- Video 2 -->
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/J6xJAdt8I8w" frameborder="0" allowfullscreen></iframe>
+        <h3>Smartwatch Features Demo</h3>
+      </div>
+
+      <!-- Video 3 -->
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/dVwGZ-FHfOM" frameborder="0" allowfullscreen></iframe>
+        <h3>Top 5 Sneakers Under ₹1000</h3>
+      </div>
+
+      <!-- Video 4 -->
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/q2nNzNo_Xps" frameborder="0" allowfullscreen></iframe>
+        <h3>Gadgets Unboxing</h3>
+      </div>
+
+      <!-- Video 5 -->
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/G9Bdgbv5oJ8" frameborder="0" allowfullscreen></iframe>
+        <h3>Beauty Products Tips</h3>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wireless Earbuds - Product Details</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #fdfcfb, #e2d1c3);
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
+    }
+    .back-btn {
+      background: #e74c3c;
+      color: #fff;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      margin-bottom: 20px;
+      transition: background 0.3s;
+    }
+    .back-btn:hover {
+      background: #c0392b;
+    }
+    .product-img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: contain;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+    .product-title {
+      font-size: 28px;
+      font-weight: 700;
+      margin: 20px 0 10px;
+      color: #2c3e50;
+    }
+    .product-price {
+      font-size: 22px;
+      color: #27ae60;
+      margin-bottom: 15px;
+    }
+    .product-desc {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+    .size-options {
+      margin-bottom: 20px;
+    }
+    .size-options label {
+      margin-right: 15px;
+      font-size: 15px;
+    }
+    .size-options input[type="radio"] {
+      margin-right: 5px;
+    }
+    .actions {
+      margin-top: 10px;
+    }
+    .btn {
+      background: #2980b9;
+      color: #fff;
+      padding: 10px 18px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-right: 10px;
+      font-size: 15px;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background: #1c5980;
+    }
+    .like-share {
+      margin-top: 25px;
+    }
+    .like-share button {
+      background: #ecf0f1;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      margin-right: 10px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .like-share button:hover {
+      background: #dfe6e9;
+    }
+    .share-message {
+      margin-top: 10px;
+      font-size: 14px;
+      color: green;
+      font-weight: bold;
+      display: none;
+    }
+    .extra-info {
+      margin-top: 30px;
+    }
+    .extra-info h3 {
+      font-size: 20px;
+      color: #2c3e50;
+      margin-bottom: 10px;
+    }
+    .extra-info ul {
+      list-style-type: disc;
+      padding-left: 20px;
+      color: #555;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+    .ratings {
+      margin-top: 30px;
+      border-top: 1px solid #ccc;
+      padding-top: 20px;
+    }
+    .ratings h3 {
+      font-size: 20px;
+      color: #2c3e50;
+      margin-bottom: 10px;
+    }
+    .rating-star {
+      color: gold;
+      font-size: 18px;
+    }
+    .review {
+      font-size: 15px;
+      margin-top: 10px;
+      color: #444;
+    }
+    .delivery-form {
+      margin-top: 30px;
+      border-top: 1px solid #ccc;
+      padding-top: 20px;
+      display: none;
+    }
+    .delivery-form input,
+    .delivery-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      font-size: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <button class="back-btn" onclick="goBack()">←  Back to Dashboard</button>
+
+<img src="C:\Users\tanuj\OneDrive\Desktop\studentNotesOrgnizer\ecommerce-store\images\Wireless Earbuds.jpeg"
+     alt="Wireless Headphones" class="product-img">
+
+   <div class="product-title">Wireless Earbuds</div>
+    <div class="product-price">₹999</div>
+    <div class="product-desc">
+      Enjoy premium sound quality with these wireless  Earbuds. Featuring deep bass, noise cancellation, long battery life, and a comfortable fit — perfect for work, play, or travel.
+    </div>
+
+    <div class="size-options">
+      <strong>Choose Color:</strong><br><br>
+      <label><input type="radio" name="color"> Black</label>
+      <label><input type="radio" name="color"> Blue</label>
+      <label><input type="radio" name="color"> Red</label>
+    </div>
+
+    <div class="actions">
+      <button class="btn" onclick="addToCart()">Add to Cart</button>
+      <button class="btn" onclick="buyNow()">Buy Now</button>
+    </div>
+
+    <div class="like-share">
+      <button onclick="likeProduct()">❤️ Like</button>
+      <button onclick="shareProduct()">🔗 Share</button>
+      <div id="shareMessage" class="share-message"></div>
+	  <!-- Add this inside your product card -->
+<button onclick="addToOrders('Wireless Earbuds', '₹999')"> 📦 My Order</button>
+<!-- Include the JS file -->
+<script src="cart.js"></script>
+    </div>
+
+    <div class="extra-info">
+      <h3>🚚 Free Delivery</h3>
+      <p>Get free delivery on orders above ₹999. Delivered in 2-4 days.</p>
+    </div>
+
+    <div class="extra-info">
+      <h3>🎧 Product Highlights</h3>
+      <ul>
+        <li><strong>Country of Origin:</strong> China</li>
+        <li><strong>Manufacturer:</strong> SoundPro Audio Pvt. Ltd.</li>
+        <li><strong>Importer:</strong> TuneMaster Distributors, Delhi</li>
+        <li><strong>Packer:</strong> MegaPack Logistics, Bengaluru</li>
+      </ul>
+    </div>
+
+    <div class="ratings">
+      <h3>🌟 Customer Ratings & Reviews</h3>
+      <div class="rating-star">★★★★☆ (4.4/5)</div>
+      <div class="review">"Amazing sound and very comfortable to wear!" – Karan M.</div>
+      <div class="review">"Battery lasts all day. Great value for money." – Priya S.</div>
+    </div>
+
+    <div class="delivery-form" id="deliveryForm">
+      <h3>Enter Delivery Details</h3>
+      <input type="text" id="custName" placeholder="Full Name" required>
+      <input type="tel" id="custPhone" placeholder="Phone Number" required>
+      <textarea id="custAddress" placeholder="Full Address" rows="4" required></textarea>
+      <button class="btn" onclick="placeOrder()">Place Order</button>
+    </div>
+  </div>
+
+  <script>
+    function goBack() {
+      window.location.href = 'electronics.html';
+    }
+
+    function addToCart() {
+      alert("✅ Product added to cart!");
+    }
+
+    function buyNow() {
+      alert("🚚 Proceeding to delivery details...");
+      document.getElementById("deliveryForm").style.display = "block";
+      document.getElementById("deliveryForm").scrollIntoView({ behavior: "smooth" });
+    }
+
+    function placeOrder() {
+      const name = document.getElementById("custName").value.trim();
+      const phone = document.getElementById("custPhone").value.trim();
+      const address = document.getElementById("custAddress").value.trim();
+
+      if (!name || !phone || !address) {
+        alert("❌ Please fill all delivery details.");
+      } else {
+        alert("✅ Order Placed!\nThank you, " + name + "!\nWe’ll deliver your Wireless Earbuds to:\n" + address);
+        document.getElementById("deliveryForm").style.display = "none";
+      }
+    }
+
+    function likeProduct() {
+      alert("❤️ You liked this product!");
+    }
+
+    function shareProduct() {
+      const productLink = window.location.href;
+      const shareMessage = document.getElementById("shareMessage");
+
+      if (navigator.share) {
+        navigator.share({
+          title: 'Wireless Earbuds',
+          text: 'Check out these amazing Wireless Earbuds!',
+          url: productLink
+        })
+        .then(() => {
+          shareMessage.textContent = "✅ Product shared successfully!";
+          shareMessage.style.display = "block";
+        })
+        .catch(() => {
+          shareMessage.textContent = "❌ Share cancelled or failed.";
+          shareMessage.style.display = "block";
+        });
+      } else {
+        navigator.clipboard.writeText(productLink)
+        .then(() => {
+          shareMessage.textContent = "🔗 Link copied! Share it with your friends.";
+          shareMessage.style.display = "block";
+        })
+        .catch(() => {
+          shareMessage.textContent = "❌ Failed to copy link.";
+          shareMessage.style.display = "block";
+        });
+
+        setTimeout(() => {
+          shareMessage.style.display = "none";
+        }, 3000);
+      }
+    }
+  </script>
+
+</body>
+</html>

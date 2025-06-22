@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard | My Simple Store</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+	 background-color: ##ffebcd; 
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+   
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    .navbar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      background-color: #343a40;
+      padding: 12px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    .navbar a,
+    .navbar button {
+      color: #fff;
+      background: none;
+      border: none;
+      padding: 10px 20px;
+      font-weight: bold;
+      margin: 5px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .navbar a:hover,
+    .navbar button:hover {
+      background-color: #495057;
+    }
+
+    .search-bar {
+      text-align: center;
+      margin: 30px 0 20px;
+    }
+
+    .search-bar input[type="text"] {
+      padding: 10px;
+      width: 60%;
+      max-width: 400px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    .dashboard-content {
+      text-align: center;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 25px;
+    }
+
+    .btn {
+      padding: 12px 20px;
+      background-color: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+
+    #category-section {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Redirect to login if not logged in -->
+  <script>
+    const user = JSON.parse(localStorage.getItem("loggedInUser"));
+    if (!user) {
+      window.location.href = "login.html";
+    }
+  </script>
+
+  <div class="container">
+    <h1>👋 Welcome, <span id="user-name">User</span>!</h1>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+      <a href="index.html">🏠 Home</a>
+      <button id="toggle-categories">📂 Categories</button>
+      <a href="mall.html">🛍️ Mall</a>
+      <a href="videofinds.html">🎥 Video Finds</a>
+      <a href="myorders.html">📦 My Orders</a>
+      <a href="index.html">🛒 Shop</a>
+      <a href="#" id="logout-link">🚪 Logout</a>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+      <input type="text" placeholder="🔍 Search for products...">
+    </div>
+
+    <!-- Dashboard content -->
+    <div class="dashboard-content">
+      <p>Use the menu above to explore the store, check your orders, or discover new products!</p>
+
+      <!-- Category Section -->
+      <div id="category-section">
+        <h2>🗂️ Select a Category:</h2>
+        <div class="btn-group">
+          <a href="popular.html" class="btn">🏆 Popular Products</a>
+          <a href="electronics.html" class="btn">📱 Electronics</a>
+          <a href="Footwear.html" class="btn">👟 Footwear</a>
+          <a href="fashion&bags.html" class="btn">👜 Fashion & Bags</a>
+          <a href="Watches.html" class="btn">⌚ Watches</a>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Show user's first name
+    const currentUser = JSON.parse(localStorage.getItem("loggedInUser"));
+    if (currentUser) {
+      const firstName = currentUser.name.split(" ")[0];
+      document.getElementById("user-name").textContent = firstName;
+    }
+
+    // Logout logic
+    document.getElementById("logout-link").addEventListener("click", () => {
+      localStorage.removeItem("loggedInUser");
+      window.location.href = "login.html";
+    });
+
+    // Toggle Category Section
+    document.getElementById("toggle-categories").addEventListener("click", () => {
+      const section = document.getElementById("category-section");
+      section.style.display = section.style.display === "none" ? "block" : "none";
+    });
+  </script>
+</body>
+</html>

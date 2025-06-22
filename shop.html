@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🛒 Shop | My Simple Store</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .product-card {
+      background: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .product-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .product-card h3 {
+      margin: 10px 0;
+      font-size: 18px;
+      color: #007bff;
+    }
+    .product-card p {
+      color: #28a745;
+      font-weight: bold;
+    }
+    .product-card button {
+      background-color: #007bff;
+      color: white;
+      padding: 8px 14px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 8px;
+    }
+    .product-card button:hover {
+      background-color: #0056b3;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-bottom: 20px;
+      background: #555;
+      color: white;
+      padding: 10px 16px;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+    .back-btn:hover {
+      background: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="dashboard.html" class="back-btn">← Back to Dashboard</a>
+  <h1>🛍️ Explore the Shop</h1>
+
+  <div class="product-grid">
+    <div class="product-card">
+      <img src="images/shoes.jpg" alt="Shoes">
+      <h3>Running Shoes</h3>
+      <p>₹1,199</p>
+      <button onclick="addToOrders('Running Shoes', '₹1,199')">Buy Now</button>
+    </div>
+
+    <div class="product-card">
+      <img src="images/smartwatch.jpg" alt="Watch">
+      <h3>Smart Watch</h3>
+      <p>₹999</p>
+      <button onclick="addToOrders('Smart Watch', '₹999')">Buy Now</button>
+    </div>
+
+    <div class="product-card">
+      <img src="images/bag.jpg" alt="Bag">
+      <h3>Fashion Bag</h3>
+      <p>₹699</p>
+      <button onclick="addToOrders('Fashion Bag', '₹699')">Buy Now</button>
+    </div>
+
+    <div class="product-card">
+      <img src="images/headphones.jpg" alt="Headphones">
+      <h3>Wireless Headphones</h3>
+      <p>₹1,599</p>
+      <button onclick="addToOrders('Wireless Headphones', '₹1,599')">Buy Now</button>
+    </div>
+
+    <div class="product-card">
+      <img src="images/perfume.jpg" alt="Perfume">
+      <h3>Luxury Perfume</h3>
+      <p>₹2,499</p>
+      <button onclick="addToOrders('Luxury Perfume', '₹2,499')">Buy Now</button>
+    </div>
+  </div>
+
+  <script src="cart.js"></script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+/* Reset and base styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #f0f0f0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;   /* centers horizontally */
+  align-items: flex-start;   /* top aligned */
+}
+
+/* Wrapper container to hold content */
+.container {
+  max-width: 800px;
+  width: 90%;
+  background: #fff;
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* Title */
+h1, h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Welcome text */
+#welcome-msg {
+  font-size: 1.2em;
+  color: #444;
+}
+
+/* Links */
+a {
+  color: #007bff;
+  text-decoration: none;
+  margin: 5px;
+  font-weight: bold;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Cart display box */
+#cart-info {
+  background: #f4f4f4;
+  padding: 10px;
+  font-size: 18px;
+  margin: 15px 0;
+}
+
+/* Product list area */
+#product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Individual product card */
+.product {
+  background: #ffffff;
+  border: 1px solid #ccc;
+  margin: 10px;
+  padding: 15px;
+  width: 200px;
+  border-radius: 8px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.product h3 {
+  margin: 10px 0;
+  color: #222;
+}
+.product p {
+  margin: 5px 0;
+  color: #555;
+}
+
+/* Buttons */
+button {
+  padding: 10px 15px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 16px;
+}
+button:hover {
+  background-color: #218838;
+}
+
+/* Form input styles */
+form {
+  margin-top: 20px;
+}
+
+input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+/* Make small screens look good */
+@media (max-width: 500px) {
+  .product {
+    width: 90%;
+  }
+}

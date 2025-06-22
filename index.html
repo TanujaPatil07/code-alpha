@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home | My Simple Store</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: linear-gradient(to right, #fdfbfb, #ebedee);
+      background-attachment: fixed;
+      min-height: 100vh;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #2c3e50;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 10px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .product-card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.2s;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .product-info {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .product-title {
+      font-size: 16px;
+      font-weight: bold;
+      margin: 10px 0 5px;
+      color: #333;
+    }
+
+    .product-price {
+      color: #27ae60;
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+
+    .add-btn {
+      background-color: #2980b9;
+      color: #fff;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .add-btn:hover {
+      background-color: #1c5980;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ✅ Back Button -->
+    <button class="back-btn" onclick="goBack()">← Back to Home</button>
+	
+  <h1>🔥 Explore Popular Products</h1>
+
+  <div class="product-grid">
+
+    <a href="product-smartphone.html" class="product-card">
+	<img src="https://m.media-amazon.com/images/I/81fxjeu8fdL._AC_UF894,1000_QL80_.jpg" 
+         alt="Smartphone X" class="product-img">
+      <div class="product-info">
+        <div class="product-title">Smartphone X</div>
+        <div class="product-price">₹14,999</div>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+    </a>
+
+    <a href="product-headphones.html" class="product-card">
+      <img src="C:\Users\tanuj\OneDrive\Desktop\studentNotesOrgnizer\ecommerce-store\images\Wireless Headphones.jpeg">
+      <div class="product-info">
+        <div class="product-title">Wireless Headphones</div>
+        <div class="product-price">₹2,499</div>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+    </a>
+	
+<a href="product-Shoes.html" class="product-card">
+    <div class="product-card">
+      <img src="https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg" alt="Shoes">
+      <div class="product-info">
+        <div class="product-title">Running Shoes</div>
+        <div class="product-price">₹3,999</div>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+    </div>
+	 </a>
+	 
+<a href="product-Backpack.html" class="product-card">
+    <div class="product-card">
+      <img src="C:\Users\tanuj\OneDrive\Desktop\studentNotesOrgnizer\ecommerce-store\images\Travel Backpack.jpeg">
+      <div class="product-info">
+        <div class="product-title">Travel Backpack</div>
+        <div class="product-price">₹1,999</div>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+    </div>
+	</a>
+	
+ <a href="product-Smartwatch.html" class="product-card">
+    <div class="product-card">
+      <img src="C:\Users\tanuj\OneDrive\Desktop\studentNotesOrgnizer\ecommerce-store\images\Smartwatch.jpeg">
+      <div class="product-info">
+        <div class="product-title">Smart Watch</div>
+        <div class="product-price">₹4,299</div>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+    </div>
+	</a>
+	
+ <a href="product-T-Shirt.html" class="product-card">
+    <div class="product-card">
+      <img src="C:\Users\tanuj\OneDrive\Desktop\studentNotesOrgnizer\ecommerce-store\images\Cotton T-shirt.jpeg">
+      <div class="product-info">
+        <div class="product-title">Cotton T-Shirt</div>
+        <div class="product-price">₹599</div>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+    </div>
+	</a>
+	
+ <a href="product-Sunglasses.html" class="product-card">
+    <div class="product-card">
+      <img src="C:\Users\tanuj\OneDrive\Desktop\studentNotesOrgnizer\ecommerce-store\images\Stylish Sunglasses2.jpeg">
+      <div class="product-info">
+        <div class="product-title">Stylish Sunglasses</div>
+        <div class="product-price">₹899</div>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+    </div>
+	</a> 
+	
+ <a href="product-Handbag.html" class="product-card">
+     <div class="product-card">
+      <img src="C:\Users\tanuj\OneDrive\Desktop\studentNotesOrgnizer\ecommerce-store\images\Leather Handbag.jpeg">
+      <div class="product-info">
+        <div class="product-title">Leather Handbag</div>
+        <div class="product-price">₹2,199</div>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+    </div>
+	</a>
+	
+ <a href="product-Laptop.html" class="product-card">
+    <div class="product-card">
+      <img src="C:\Users\tanuj\OneDrive\Desktop\studentNotesOrgnizer\ecommerce-store\images\High Performance Laptop.jpeg">
+      <div class="product-info">
+        <div class="product-title">Laptop Pro</div>
+        <div class="product-price">₹54,999</div>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+    </div>
+	</a>
+	
+ <a href="product-Camera.html" class="product-card">
+    <div class="product-card">
+      <img src="C:\Users\tanuj\OneDrive\Desktop\studentNotesOrgnizer\ecommerce-store\images\Canon EOS 1500D DSLR Camera.jpeg">
+      <div class="product-info">
+        <div class="product-title">DSLR Camera</div>
+        <div class="product-price">₹39,999</div>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+    </div>
+	</a>
+
+ <a href="product-Speaker.html" class="product-card">
+    <div class="product-card">
+      <img src="C:\Users\tanuj\OneDrive\Desktop\studentNotesOrgnizer\ecommerce-store\images\JBL Go 3 Portable Bluetooth Speaker.jpeg">
+      <div class="product-info">
+        <div class="product-title">Bluetooth Speaker</div>
+        <div class="product-price">₹1,499</div>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+    </div>
+	</a>
+
+ <a href="product-classicwatch.html" class="product-card">
+    <div class="product-card">
+      <img src="C:\Users\tanuj\OneDrive\Desktop\studentNotesOrgnizer\ecommerce-store\images\Titan Classic Men's Leather Strap Watch.jpeg">
+      <div class="product-info">
+        <div class="product-title">Classic Watch</div>
+        <div class="product-price">₹2,899</div>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+    </div>
+	</a>
+
+ <a href="product-Perfume.html" class="product-card">
+	<div class="product-card">
+      <img src="C:\Users\tanuj\OneDrive\Desktop\studentNotesOrgnizer\ecommerce-store\images\Luxury Eau De Parfum - 100ml.jpeg">
+      <div class="product-info">
+        <div class="product-title">Luxury Perfume</div>
+        <div class="product-price">₹1,299</div>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+    </div>
+	</a>
+
+ <a href="product-Makeupkit.html" class="product-card">
+    <div class="product-card">
+      <img src="C:\Users\tanuj\OneDrive\Desktop\studentNotesOrgnizer\ecommerce-store\images\Complete Professional Makeup Kit - 24 Items.jpeg">
+      <div class="product-info">
+        <div class="product-title">Makeup Kit</div>
+        <div class="product-price">₹1,199</div>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+    </div>
+	</a>
+
+  <a href="product-Sneakers.html" class="product-card">
+	<div class="product-card">
+      <img src="C:\Users\tanuj\OneDrive\Desktop\studentNotesOrgnizer\ecommerce-store\images\Unisex White Sneakers – Casual & Stylish.jpeg">
+      <div class="product-info">
+        <div class="product-title">White Sneakers</div>
+        <div class="product-price">₹2,499</div>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+    </div>
+	</a>
+
+  </div>
+  
+  <!-- ✅ JavaScript Section -->
+  <script>
+    function goBack() {
+      // Change 'dashboard.html' to your actual homepage file if different
+      window.location.href = 'dashboard.html';
+    }
+	</script>
+</body>
+</html>

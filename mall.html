@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mall | My Simple Store</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: ##ffebcd;
+      padding: 20px;
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .back-btn {
+      display: inline-block;
+      margin-bottom: 20px;
+      background: #6c757d;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+    .back-btn:hover {
+      background: #5a6268;
+    }
+
+    .mall-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .mall-header input[type="text"] {
+      padding: 8px;
+      width: 200px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    .mall-header select {
+      padding: 8px;
+      border-radius: 4px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .product-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-card img {
+      width: 100%;
+      max-height: 180px;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+
+    .product-card h3 {
+      font-size: 18px;
+      margin: 10px 0;
+      color: #333;
+    }
+
+    .product-card p {
+      font-size: 16px;
+      color: #007bff;
+      margin-bottom: 10px;
+    }
+
+    .product-card button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .product-card button:hover {
+      background-color: #0056b3;
+    }
+
+    .section-title {
+      margin-top: 40px;
+      margin-bottom: 15px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <a href="dashboard.html" class="back-btn">← Back to Dashboard</a>
+    <h1>🛒 Welcome to the Mall</h1>
+
+    <!-- 🔍 Search and Filter -->
+    <div class="mall-header">
+      <input type="text" placeholder="Search products...">
+      <select>
+        <option value="all">All Categories</option>
+        <option value="footwear">Footwear</option>
+        <option value="gadgets">Watches</option>
+        <option value="fashion">Fashion</option>
+        <option value="beauty">Beauty</option>
+        <option value="accessories">Electronics</option>
+      </select>
+    </div>
+
+    <!-- 🔥 Featured Products -->
+    <div class="section-title">🔥 Featured Products</div>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="C:\Users\tanuj\OneDrive\Desktop\studentNotesOrgnizer\ecommerce-store\images\Running Shoes.jpeg">
+        <h3>Running Shoes</h3>
+        <p>₹1,199</p>
+		<button><a href="runningshoes1.html" class="btn">👟 Visit</a></button>
+      </div>
+      <div class="product-card">
+        <img src="C:\Users\tanuj\OneDrive\Desktop\studentNotesOrgnizer\ecommerce-store\images\Smartwatch.jpeg">
+        <h3>Smart Watch</h3>
+        <p>₹2,499</p>
+        <button><a href="smartwatch3.html" class="btn">⌚ Visit</a></button>
+      </div>
+      <div class="product-card">
+        <img src="C:\Users\tanuj\OneDrive\Desktop\studentNotesOrgnizer\ecommerce-store\images\Travel Backpack.jpeg">
+        <h3>Stylish Backpack</h3>
+        <p>₹899</p>
+        <button><a href="Stylish backpack.html" class="btn">👜 Visit</a></button>
+      </div>
+      <div class="product-card">
+        <img src="C:\Users\tanuj\OneDrive\Desktop\studentNotesOrgnizer\ecommerce-store\images\Power Bank 10000mAh.jpeg">
+        <h3>Power Bank 10,000mAh</h3>
+        <p>₹649</p>
+        <button><a href="powerbank2.html" class="btn">📱 Visit</a></button>
+      </div>
+    </div>
+
+    <!-- 📢 Deal of the Day -->
+    <div class="section-title">📢 Deal of the Day</div>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="C:\Users\tanuj\OneDrive\Desktop\studentNotesOrgnizer\ecommerce-store\images\Wireless Headphones.jpeg">
+        <h3>Wireless Headphones</h3>
+        <p><del>₹1,999</del> ₹1,299</p>
+        <button><a href="headphones1.html" class="btn">📱 Visit</a></button>
+      </div>
+      <div class="product-card">
+        <img src="C:\Users\tanuj\OneDrive\Desktop\studentNotesOrgnizer\ecommerce-store\images\Leather Handbag.jpeg">
+        <h3>Leather Handbag</h3>
+        <p><del>₹2,999</del> ₹1,799</p>
+		<button><a href="Hand Bag1.html" class="btn">👜 Visit</a></button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
